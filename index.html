@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Meta Mind</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="navigation">
+            <div class="nav-cont">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                </div>
+                <div class="menu">
+                    <div class="center">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-timer">
+            <div id="countdown">
+                <ul>
+                  <li><span id="days"></span>days</li>
+                  <li><span id="hours"></span>Hours</li>
+                  <li><span id="minutes"></span>Minutes</li>
+                  <li><span id="seconds"></span>Seconds</li>
+                </ul>
+              </div>
+        </div>
+        <div class="main-menu">
+            <h1>Breakthrough Technology  <br><span class="m-h2">that will make you digitally immortal.</span></h1>
+            <span class="mm-hr"><hr></span>
+            <div class="demo-container">
+                <div class="demo-box" id="glow-blue"></div>
+                <div class="demo-box" id="glow-green"></div>
+                <div class="demo-box" id="glow-red"></div>
+                <div class="demo-box" id="glow-pink"></div>
+                <div class="demo-box" id="glow-yellow"></div>
+            </div>
+        </div>
+        <div class="column-menu">
+            <div class="row">
+                <div class="column" style="background-color:#D83564;">
+                    <h2>Understand the Metaverse</h2>
+                  <img src="images/Metaverse.png" alt="Metaverse">
+                </div>
+                <div class="column" style="background-color:#B1D243;">
+                  <h2>Know your Brain</h2>
+                  <img src="images/Brain.png" alt="Metaverse" style="width: 400px;">
+                
+                </div>
+                <div class="column" style="background-color:#3CAEE4;">
+                  <h2>Achieve Digital Immortality</h2>
+                    <img src="images/elixir.png" alt="Digital Immortaty" style="width: 250px;">
+                </div>
+              </div>
+        </div>
+    <script>
+        (function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+  //I'm adding this section so I don't have to keep updating this pen every year :-)
+  //remove this if you don't need it
+  let today = new Date(),
+      dd = String(today.getDate()).padStart(2, "0"),
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+      yyyy = today.getFullYear(),
+      nextYear = yyyy + 1,
+      dayMonth = "12/30/",
+      birthday = dayMonth + yyyy;
+  
+  today = mm + "/" + dd + "/" + yyyy;
+  if (today > birthday) {
+    birthday = dayMonth + nextYear;
+  }
+  //end
+  
+  const countDown = new Date(birthday).getTime(),
+      x = setInterval(function() {    
+
+        const now = new Date().getTime(),
+              distance = countDown - now;
+
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+        //do something later when date is reached
+        if (distance < 0) {
+          document.getElementById("headline").innerText = "It's my birthday!";
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          clearInterval(x);
+        }
+        //seconds
+      }, 0)
+  }());
+    </script>
+    </body>
+</html>

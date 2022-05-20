@@ -1,0 +1,234 @@
+*{box-sizing:border-box}
+body{
+    margin:0;
+    top:0;
+    background-color: #F7F9F8;
+}
+.navigation{
+    display:inline-block;
+    top:0;
+    width:100%;
+}
+ .nav-cont{
+    width: 95%;
+    padding:5px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.logo{
+    float: left;
+}
+.logo img{
+    display: block;
+    width:75px;
+}
+.menu{
+    float: right;
+}
+
+.menu div {
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+.project-timer{
+    background-color: #000;
+    font-family: girloy-bold;
+    color:#F7F9F8;
+    text-align: center;
+    padding: 2px;
+
+}
+li {
+    display: inline-block;
+    font-size: 18px;
+    list-style-type: none;
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  li span {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  @media all and (max-width: 768px) {
+    h1 {
+      font-size: calc(1.5rem * var(--smaller));
+    }
+    
+    li {
+      font-size: calc(1.125rem * var(--smaller));
+    }
+    
+    li span {
+      font-size: calc(3.375rem * var(--smaller));
+    }
+  }
+.main-menu{
+    display: inline-block;
+    width: 100%;
+    text-align: center;  
+    height: 480px;
+    padding: 10px;
+}
+.mm-hr hr{
+    width: 50%;
+    height: 2.5px;
+    background-color:black;
+    margin: 0 auto;
+    border: none;
+    margin-bottom: 10px;
+}
+.mm-update-link{
+    color: #F7F9F8;
+    text-decoration: none;
+    font-family: girloy-bold;
+    font-size: 18px;
+    padding: 5px;
+}
+.main-menu h1{
+    font-family: gilroy-bold;
+    font-size: 65px;
+    letter-spacing: 3px;
+    color: #000; 
+    font-weight: 100;
+}
+.main-menu .m-h2{
+    font-family: gilroy-bold;
+    letter-spacing: 2px;
+    font-size: 40px;
+    color: #000; 
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 550px;
+  color: #F7F9F8;
+  text-align: center;
+  opacity: 0.89;
+  font-family: gilroy-bold;
+  letter-spacing: 2px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.column:hover{
+    opacity: 1;
+}
+.column img{
+  display: block;
+  width: 350px;
+  margin: 0 auto;
+  padding: 5px;
+  -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate; 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.demo-container {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  height: auto;
+  margin: 50px auto;
+}
+.demo-box {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 100%;
+  margin: 20px;
+  background-color: #000;
+}
+
+/* Glow */
+.demo-box {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 4s ease-in-out infinite alternate;
+}
+
+/* Glow Colors */
+#glow-blue {
+  animation-name: glow-blue;
+}
+@-webkit-keyframes glow-blue {
+  from {
+    box-shadow: 0 0 2px #82d8f9, 0 0 10px #82d8f9, 0 0 20px #00a6fb, 0 0 30px #00a6fb;
+  }
+  to {
+    box-shadow: 0 0 10px #82d8f9, 0 0 20px #5ec9fe, 0 0 30px #5ec9fe, 0 0 40px #5ec9fe;
+  }
+}
+
+#glow-green {
+  animation-name: glow-green;
+}
+@-webkit-keyframes glow-green {
+  from {
+    box-shadow: 0 0 2px #B7E4C7, 0 0 10px #B7E4C7, 0 0 20px #52B788, 0 0 30px #52B788;
+  }
+  to {
+    box-shadow: 0 0 10px #B7E4C7, 0 0 20px #95D5B2, 0 0 30px #95D5B2, 0 0 40px #95D5B2;
+  }
+}
+
+#glow-red {
+  animation-name: glow-red;
+}
+@keyframes glow-red {
+  from {
+    box-shadow: 0 0 2px #fe495e, 0 0 10px #fe495e, 0 0 20px #d90429, 0 0 30px #d90429;
+  }
+  to {
+    box-shadow: 0 0 10px #fe495e, 0 0 20px #ef233c, 0 0 30px #ef233c, 0 0 40px #ef233c;
+  }
+}
+
+#glow-pink {
+  animation-name: glow-pink;
+}
+@keyframes glow-pink {
+  from {
+    box-shadow: 0 0 2px #ffc4d6, 0 0 10px #ffc4d6, 0 0 20px #ff5d8f, 0 0 30px #ff5d8f;
+  }
+  to {
+    box-shadow: 0 0 10px #ffc4d6, 0 0 20px #ff87ab, 0 0 30px #ff87ab, 0 0 40px #ff87ab;
+  }
+}
+
+#glow-yellow {
+  animation-name: glow-yellow;
+}
+@keyframes glow-yellow {
+  from {
+    box-shadow: 0 0 2px #fcefb4, 0 0 10px #fcefb4, 0 0 20px #fecf3e, 0 0 30px #fecf3e;
+  }
+  to {
+    box-shadow: 0 0 10px #fcefb4, 0 0 20px #ffe94e, 0 0 30px #ffe94e, 0 0 40px #ffe94e;
+  }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
