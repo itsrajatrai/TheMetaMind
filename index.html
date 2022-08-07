@@ -5,6 +5,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="navigation">
@@ -12,7 +18,7 @@
                 <div class="logo">
                     <a href="index.html"><img src="images/logo.png" alt="logo"></a>
                 </div>
-                <div class="menu">
+                <div class="menu" onclick="openNav()">
                     <div class="center">
                         <div></div>
                         <div></div>
@@ -45,20 +51,112 @@
         <div class="column-menu">
             <div class="row">
                 <div class="column" style="background-color:#D83564;">
-                    <h2>Understand the Metaverse</h2>
+                    <h2>1. Understand the Metaverse</h2>
                   <img src="images/Metaverse.png" alt="Metaverse">
                 </div>
                 <div class="column" style="background-color:#B1D243;">
-                  <h2>Know your Brain</h2>
+                  <h2>2. Know your Brain</h2>
                   <img src="images/Brain.png" alt="Metaverse" style="width: 400px;">
                 
                 </div>
                 <div class="column" style="background-color:#3CAEE4;">
-                  <h2>Achieve Digital Immortality</h2>
+                  <h2>3. Achieve Digital Immortality</h2>
                     <img src="images/elixir.png" alt="Digital Immortaty" style="width: 250px;">
                 </div>
               </div>
+        </div>    
+        <div class="about-section">
+          <h2 class="title">Know about us</h2>
+          <h3 class="title-2">About The Meta Minds</h3>
+          <p>We are The Meta Minds, and our aim is to achieve digital immortality. 
+            We believe that everyone should have the opportunity to live forever, and we are working to make that a reality. 
+            We are a team of students, engineers, and programmers who are dedicated to making digital immortality a reality.
+            We are currently working on a project that will make digital immortality possible, and we are always looking for new ways to make it a reality.</p>
+        </div>    
+        <div class="timeline-section">
+          <h2 class="title">Track the timeline</h2>
+          <h3 class="title-2">Our Progress</h3>
+          <div class="timeline">
+            <div class="container left">
+              <div class="content">
+                <h2>March-May</h2>
+                <p>Project Idea was Evaluated and Literature Review was Started</p>
+              </div>
+            </div>
+            <div class="container right">
+              <div class="content">
+                <h2>June-July</h2>
+                <p>Literature survey was done and survey paper was Started</p>
+              </div>
+            </div>
+            <div class="container left">
+              <div class="content">
+                <h2>August</h2>
+                <p>Project Website is launched and Survey paper is to be communicated.</p>
+              </div>
+          </div>
         </div>
+      
+        <div class="team-section">
+          <div class="inner-width">
+            <h2 class="title">Let's meet with our team members</h2>
+            <h3 class="title-2">Team Meta Minds</h3>
+            <div class="pers">
+              <div class="pe">
+                <img src="./images/swati.png" alt="Swati">
+                <div class="p-name">Swati Aggrawal</div>
+                <div class="p-des">Designer</div>
+              </div>
+      
+              <div class="pe">
+                <img src="./images/rajat.png" alt="Rajat">
+                <div class="p-name">Rajat Rai</div>
+                <div class="p-des">Developer</div>
+              </div>
+      
+              <div class="pe">
+                <img src="./images/subhasmita.png" alt="Subhasmita">
+                <div class="p-name">Subhasmita Swain </div>
+                <div class="p-des">Director</div>
+              </div>
+      
+      
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <div class="footer">
+          <div class="row">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          </div>
+          
+          <div class="row">
+          <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Progress</a></li>
+          <li><a href="#">Our Team</a></li>
+          </ul>
+          </div>
+          
+          <div class="row">
+          The Meta Mind Copyright © 2022 TMM - All rights reserved 
+          </div>
+          </div>
+          </footer>
+
+          <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#">SCIENCE</a>
+            <a href="#">APPROACH</a>
+            <a href="#">APPLICATIONS</a>
+            <a href="#">BLOGS</a>
+          </div>
+
     <script>
         (function () {
   const second = 1000,
@@ -103,6 +201,17 @@
         //seconds
       }, 0)
   }());
+
+
+  function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginRight = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginRight= "0";
+}
     </script>
     </body>
 </html>
