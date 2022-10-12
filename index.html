@@ -4,8 +4,9 @@
         <title>The Meta Mind</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css" id="theme-select">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel = "icon" href = "/images/logo.png" type = "image/x-icon">
 
 <!--GOOGLE FONTS-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -13,12 +14,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     </head>
     <body>
+     
         <div class="navigation">
             <div class="nav-cont">
                 <div class="logo">
-                    <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    <a href="#"><img src="images/logo.png" alt="logo"></a>
                 </div>
-                <div class="menu" onclick="openNav()">
+                <div class="menu1" onclick="openNav()"><i class="fa-solid fa-3x fa-bars"></i>
                     <div class="center">
                         <div></div>
                         <div></div>
@@ -38,6 +40,7 @@
               </div>
         </div>
         <div class="main-menu">
+          <button id="switch-mode"><i class="fa-solid fa-2x fa-sun"></i></button>
             <h1>Breakthrough Technology  <br><span class="m-h2">that will make you digitally immortal.</span></h1>
             <span class="mm-hr"><hr></span>
             <div class="demo-container">
@@ -157,7 +160,8 @@
             <a href="#">BLOGS</a>
           </div>
 
-    <script>
+<script>
+     
         (function () {
   const second = 1000,
         minute = second * 60,
@@ -212,6 +216,20 @@ function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginRight= "0";
 }
+const modeBtn=document.getElementById("switch-mode")
+const themeSelect=document.getElementById("theme-select")
+modeBtn.addEventListener("click",function(){
+  console.log("clicked")
+    if(themeSelect.getAttribute("href")=="style.css"){
+        themeSelect.href="darkmode-index.css"
+        modeBtn.innerHTML=`<i class="fa-solid fa-2x fa-moon">`
+    }
+    else{
+        themeSelect.href="style.css"
+        modeBtn.innerHTML=`<i class="fa-solid fa-2x fa-sun">`
+    }
+})
     </script>
+    <script src="https://kit.fontawesome.com/ffd0d615f4.js" crossorigin="anonymous"></script>
     </body>
 </html>
